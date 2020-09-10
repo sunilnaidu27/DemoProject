@@ -32,7 +32,7 @@ public class Module1 extends BaseClass {
 		homepage.clickOnContactDetails();
 	}
 
-	@Test(invocationCount=2)
+	@Test(invocationCount=1)
 	public void TC101() {
 		contactdetailspage = new Pg103_ContactDetails(driver);
 		contactdetailspage.clickOnEdit();
@@ -43,26 +43,11 @@ public class Module1 extends BaseClass {
 		contactdetailspage.setCounty("India");
 		contactdetailspage.setHomeTelephone("9632598745");
 		contactdetailspage.setWorkTelephone("9635125896");
-		contactdetailspage.setWorkEmail("abcd@gmail.com");
-		contactdetailspage.setOtherEmail("pqrs@gmail.com");
+		contactdetailspage.setWorkEmail("abctd@gmail.com");
+		contactdetailspage.setOtherEmail("pqurs@gmail.com");
 		contactdetailspage.clickOnSave();
 	}
-	@Test(invocationCount=1)
-	public void TC102() {
-		contactdetailspage = new Pg103_ContactDetails(driver);
-		contactdetailspage.clickOnEdit();
-		contactdetailspage.setAddressStreet1(getdata("Address1"));
-		contactdetailspage.setAddressStreet2("Madhapur");
-		contactdetailspage.setCity("Hyderabad");
-		contactdetailspage.setZipCode("500081");
-		contactdetailspage.setCounty("India");
-		contactdetailspage.setHomeTelephone("9632598745");
-		contactdetailspage.setWorkTelephone("9635125896");
-		contactdetailspage.setWorkEmail("abcd@gmail.com");
-		contactdetailspage.setOtherEmail("pqrs@gmail.com");
-		setdata("Status", "Passed");
-		contactdetailspage.clickOnSave();
-	}
+	
 	@AfterMethod
 	public void after() {
 		homepage.Logout();
